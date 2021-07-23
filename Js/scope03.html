@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function, catch, with 구문의 스코프 생성</title>
+  </head>
+  <body>
+    <script>
+      // function 구문의 스코프 생성
+      // function foo() {
+      //   var b = "하이";
+      // }
+      // console.log(typeof b === "undefined");
+
+      // catch 구문의 스코프 생성
+      // try {
+      //   throw new exception("하이");
+      // } catch (err) {
+      //   var test = "can you see me";
+      //   console.log(err instanceof ReferenceError === true);
+      // }
+      // console.log(test === "can you see me");
+      // console.log(typeof err === "undefined");
+
+      // with 구문의 스코프 생성
+      with ({ inScope: "ㅎㅎㅎ" }) {
+        var notInScope = "but you can see me";
+        console.log(inScope === "ㅎㅎㅎ");
+      }
+
+      console.log(typeof inScope === "undefined");
+      console.log(notInScope === "but you can see me");
+    </script>
+  </body>
+</html>

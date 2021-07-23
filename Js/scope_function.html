@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수를 이용한 문제해결</title>
+  </head>
+  <body>
+    <div id="div0">클릭 01</div>
+    <div id="div1">클릭 02</div>
+    <div id="div2">클릭 03</div>
+
+    <script>
+      function setDivClick(index) {
+        document.getElementById("div" + index).addEventListener(
+          "click",
+          function () {
+            alert("click div #" + index);
+          },
+          false
+        );
+      }
+
+      var i,
+        len = 3;
+
+      for (i = 0; i < len; i++) {
+        setDivClick(i);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스코프의 생성</title>
+  </head>
+  <body>
+    <script>
+      for (var i = 0; i < 10; i++) {
+        var total = (total || 0) + i;
+        var last = i;
+        if (total > 16) {
+          break;
+        }
+      }
+
+      console.log(typeof total !== "undefined");
+      console.log(typeof last !== "undefined");
+      console.log(typeof i !== "undefined");
+      console.log("total === " + total + ", last === " + last);
+    </script>
+  </body>
+</html>
