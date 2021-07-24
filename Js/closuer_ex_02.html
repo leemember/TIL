@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저를 이용한 문제해결</title>
+  </head>
+  <body>
+    <script>
+      function outer() {
+        var count = 0;
+        return {
+          increase: function () {
+            return ++count;
+          },
+
+          decrease: function () {
+            return --count;
+          },
+        };
+      }
+
+      var counter = outer();
+
+      console.log(counter.increase());
+      console.log(counter.increase());
+      console.log(counter.decrease());
+
+      var counter2 = outer();
+      console.log(counter2.increase());
+    </script>
+  </body>
+</html>

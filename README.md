@@ -9,7 +9,7 @@
 ### 자바스크립트의 스코프와 클로저
 
 - [`스코프(Scope) 란 ?`](https://github.com/leemember/TIL/issues/1)
-- [`클로저(Closure) 란 ?`](./)
+- [`클로저(Closure) 란 ?`](https://github.com/leemember/TIL/issues/2)
 
 ### 자바스크립트의 변수
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저를 이용한 문제해결</title>
+  </head>
+  <body>
+    <script>
+      var countFactory = (function () {
+        var staticCount = 0;
+
+        return function () {
+          var localCount = 0;
+
+          return {
+            increase: function () {
+              return {
+                static: ++staticCount,
+                local: ++localCount,
+              };
+            },
+
+            decrease: function () {
+              return {
+                static: --staticCount,
+                local: --localCount,
+              };
+            },
+          };
+        };
+      })();
+
+      var counter = countFactory(),
+        counter2 = countFactory();
+      console.log(counter.increase());
+      console.log(counter.increase());
+      console.log(counter2.decrease());
+      console.log(counter.increase());
+    </script>
+  </body>
+</html>

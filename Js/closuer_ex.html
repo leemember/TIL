@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저를 이용한 문제해결</title>
+  </head>
+  <body>
+    <script>
+      function outer() {
+        var count = 0;
+        var inner = function () {
+          return ++count;
+        };
+
+        return inner;
+      }
+
+      var increase = outer();
+
+      console.log(increase());
+      console.log(increase());
+    </script>
+  </body>
+</html>
