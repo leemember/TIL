@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>var 키워드를 사용하지 않는 변수 접근의 예</title>
+  </head>
+  <body>
+    <script>
+      var getVariable = "global";
+
+      (function () {
+        var getVariable = "immediate function";
+        insideFunction();
+        console.log("2. immediate function : " + getVariable);
+
+        function insideFunction() {
+          console.log("1. Inside function: " + getVariable);
+          getVariable = "will I be global?";
+        }
+      })();
+
+      console.log("3. Global : " + getVariable);
+    </script>
+  </body>
+</html>
