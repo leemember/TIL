@@ -15,7 +15,7 @@
 
 - [`자바스크립트의 기본형과 typeof`](https://github.com/leemember/TIL/issues/3)
 - [`new String("")과, 그리고 String("")의 차이`](https://github.com/leemember/TIL/issues/4)
-- [`글로벌 변수`](./)
+- [`글로벌 변수`](https://github.com/leemember/TIL/issues/5)
 - [`글로벌 변수 정의`](./)
 - [`window 객체`](./)
 - [`글로벌 변수 선언 방법과 차이`](./)

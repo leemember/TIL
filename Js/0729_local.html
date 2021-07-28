@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저를 활용하여 로컬 변수를 활용하는 예</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var appendDiv = document.getElementById("appendDiv"),
+          callback = {
+            1: (function () {
+              var div = document.createElement("div");
+              div.innerHTML = "#1";
+              return function () {
+                return div.cloneNode(true);
+              };
+            })(),
+
+            2: (function () {
+              var img = document.createElement("img");
+              img.src =
+                "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA5MThfMjAz%2FMDAxNjAwNDQwNDcxNDU0.ufToRuzuoG0K90Z9IFOlGIsEU2E5a81_VVCMOG_zN2Yg.4c0rtiOdZ-6CKzXi541n9zNolb5gSaa3gazgzEoq31Yg.PNG.solinsystem%2FSolinsystem_Widget-3.png&type=sc960_832";
+              return function () {
+                return img.cloneNode(true);
+              };
+            })(),
+
+            delete: function () {
+              appendDiv.innerHTML = " ";
+            },
+          };
+
+        function append(e) {
+          var target = e.target || e.srcElement || event.srcElement,
+            callbackFunction = callback[target.getAttribute("data-cb")];
+          appendDiv.appendChild(callbackFunction());
+        }
+        document.getElementById("wrapper").addEventListener("click", append);
+      })();
+    </script>
+  </body>
+</html>
