@@ -16,7 +16,7 @@ function App() {
       </h1>
       <a href={naver.url}>{naver.name}</a>
       <Hello />
-      <Wellcome />
+      <Wellcome age={20} />
     </div>
   );
 }
