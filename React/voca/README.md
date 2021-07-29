@@ -63,7 +63,7 @@ export default function Hello() {
 
 이 함수로 인해 50이 찍혀 나온다.
 
-### onChange
+## onChange
 
 #### 첫 번째 방법
 
@@ -114,4 +114,59 @@ export default function Hello() {
      }} />
     </>
   )
+```
+
+## 사용자들이 자주 사용하는 Hooks
+
+### useState
+
+`const [name, setName] = useState();` <br>
+여기서 첫 번째 담긴 함수는 현재 상태를 의미하고 두 번째에 담긴 함수는 현재 state를 변경해주는 함수 입니다. 그리고 `useState()` 괄호에는 초기값을 넣어주면 됩니다.
+
+### 첫 번째 방법
+
+```
+import { useState } from "react";
+
+export default function Wellcome() {
+  const [name, setName] = useState("Mike");
+
+  function changeName() {
+    setName(name === "Mike" ? "Jane" : "Mike");
+  }
+
+  return (
+    <>
+      <h1>state</h1>
+      <h2 id="name">{name} 속성값</h2>
+      <button onClick={changeName}>Change</button>
+    </>
+  );
+}
+```
+
+### 두 번째 방법
+
+- 버튼 안에 onClike 이벤트 안에다가 함수 적용하기
+
+```
+import { useState } from "react";
+
+export default function Wellcome() {
+  const [name, setName] = useState("Mike");
+
+  return (
+    <>
+      <h1>state</h1>
+      <h2 id="name">{name} 속성값</h2>
+      <button
+        onClick={() => {
+          setName(name === "Mike" ? "Jane" : "Mike");
+        }}
+      >
+        Change
+      </button>
+    </>
+  );
+}
 ```
