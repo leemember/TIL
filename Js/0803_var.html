@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여러 개의 var 구문으로 변수를 정의한 예</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var subjects = ["1st subject", "2nd subject", "3rd subject"],
+          el,
+          i,
+          xhr;
+        for (var i = 0; i < subjects.length; i++) {
+          el = document.getElementById("subject" + i);
+          el.innerHTML = el.value = subjects[i];
+          el.addEventListener("click", function () {
+            alert(this.value + " pressed!");
+          });
+        }
+
+        xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://www.naver.com");
+        xhr.onload = function () {
+          var contents = JSON.parse(xhr.responseText),
+            el,
+            i;
+          for (var i = 0; i < contents.length; i++) {
+            el = document.getElementById("content" + i);
+            el.innerHTML = contents[i];
+          }
+        };
+      })();
+    </script>
+  </body>
+</html>

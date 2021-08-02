@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>여러 개의 var 구문으로 변수를 정의한 예</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var xhr, i;
+
+        for (i = 0; i < 10; i++) {
+          xhr = new XMLHttpRequest();
+          xhr.open("GET", "http://naver.com" + i);
+          xhr.onload = function () {
+            var json = JSON.parse(xhr.responseText);
+            for (i = 0; i < 5; i++) {
+              alert(i + " = " + json[i]);
+            }
+          };
+        }
+      });
+    </script>
+  </body>
+</html>
