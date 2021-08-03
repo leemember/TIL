@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상위 스코프 체인의 변수를 로컬 변수로 정의하여 사용하는 예</title>
+  </head>
+  <body>
+    <div id="divMouseover">Mouse over Highlight</div>
+    <div id="divFloatingContent">Floating Content</div>
+
+    <script>
+      (function () {
+        var divMouseover = document.getElementById("divMouseover"),
+          divFloatingContent = document.getElementById("divFloatingContent");
+
+        divMouseover.onmouseover = function () {
+          var xhr = new XMLHttpRequest(),
+            divMouseoverStyle = divMouseover.style;
+
+          divMouseoverStyle.style.backgroundColor = "#FF0000";
+          divMouseoverStyle.style.color = "white";
+          divMouseoverStyle.style.fontSize = "30px";
+
+          xhr.open("GET", "http://myserver.com/floating_contents");
+          xhr.onload = function () {
+            var localDivFloatingContent = divFloatingContent;
+            localDivFloatingContent.innerHTML = xhr.responseText;
+            localDivFloatingContent.style.display = "block";
+          };
+
+          xhr.send();
+        };
+
+        divMouseover.onmouseout = function () {
+          var divMouseoverStyle = divMouseover.style;
+          divMouseoverStyle.backgroundColor = "#ffffff";
+          divMouseoverStyle.color = "black";
+          divMouseoverStyle.fontSize = "25px";
+          divFloatingContent.style.display = "none;";
+        };
+      })();
+    </script>
+  </body>
+</html>

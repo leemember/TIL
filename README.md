@@ -20,8 +20,8 @@
 - [`window 객체`](https://github.com/leemember/TIL/issues/7)
 - [`글로벌 변수 선언 방법과 차이`](https://github.com/leemember/TIL/issues/8)
 - [`var 키워드의 효율적인 사용`](https://github.com/leemember/TIL/issues/9)
-- [`글로벌 변수 최소화하기`](./)
-- [`변수 사용 방법과 성능`](./)
+- [`글로벌 변수 최소화하기`](https://github.com/leemember/TIL/issues/10)
+- [`변수 사용 방법과 성능`](https://github.com/leemember/TIL/issues/11)
 
 ### 프로토타입과 객체지향, 그리고 상속
 
