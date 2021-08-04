@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체의 모든 속성을 출력하는 예</title>
+  </head>
+  <body>
+    <script>
+      function Person(name, blog) {
+        this.name = name;
+        this.blog = blog;
+        this.getName = function () {
+          return this.name;
+        };
+        this.getBlog = function () {
+          return this.blog;
+        };
+      }
+
+      var unikys = new Person("unikys", "unikys.tistory.com");
+      console.log(unikys.getName());
+      console.log(unikys.getBlog());
+    </script>
+  </body>
+</html>
