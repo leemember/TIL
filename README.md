@@ -26,11 +26,11 @@
 ### 프로토타입과 객체지향, 그리고 상속
 
 - [`프로토타입을 통한 객체지향`](https://github.com/leemember/TIL/issues/12)
-- [`자바스크립트에서의 상속 활용`](./)
+- [`자바스크립트에서의 상속 활용`](https://github.com/leemember/TIL/issues/13)
 
 ### 디자인 패턴 실용
 
-- [`모듈 패턴`](./)
+- [`모듈 패턴`](https://github.com/leemember/TIL/issues/14)
 - [`이벤트 델리게이션 패턴`](./)
 - [`프락시 패턴`](./)
 - [`데커레이터 패턴`](./)
