@@ -31,7 +31,7 @@
 ### 디자인 패턴 실용
 
 - [`모듈 패턴`](https://github.com/leemember/TIL/issues/14)
-- [`이벤트 델리게이션 패턴`](./)
+- [`이벤트 델리게이션 패턴`](https://github.com/leemember/TIL/issues/15)
 - [`프락시 패턴`](./)
 - [`데커레이터 패턴`](./)
 - [`init-time branching 패턴`](./)
