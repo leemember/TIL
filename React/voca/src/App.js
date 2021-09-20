@@ -1,4 +1,3 @@
-import "./App.css";
 import Hello from "./component/Hello";
 import Wellcome from "./component/Wellcome";
 

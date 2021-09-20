@@ -32,38 +32,13 @@
 
 - [`모듈 패턴`](https://github.com/leemember/TIL/issues/14)
 - [`이벤트 델리게이션 패턴`](https://github.com/leemember/TIL/issues/15)
-- [`프락시 패턴`](./)
-- [`데커레이터 패턴`](./)
-- [`init-time branching 패턴`](./)
-- [`Self-defining function 패턴`](./)
-- [`메모이제이션 패턴`](./)
-- [`Self-invoking constructor 패턴`](./)
-- [`콜백 패턴`](./)
-- [`커링 패턴`](./)
-
-### 브라우저 환경에서의 자바스크립트
-
-- [`단일 스레드 환경`](./)
-- [`requestAnimationFrame() 함수`](./)
-- [`DOM과 자바스크립트`](./)
-- [`웹 워커`](./)
-
-### 자바스크립트 성능과 사용자 경험 개선
-
-- [`<scipt> 태그 위치와 레이지 로드`](./)
-- [`인터넷 환경에서의 HTTP GET 최적화`](./)
-- [`자바스크립트 코딩 스타일`](./)
-- [`자바스크립트 검증 도구 - JSLint`](./)
-- [`자바스크립트 빌드 환경`](./)
-
-### 자바스크립트 표준
-
-- [`ECMAScript 6 표준`](./)
-- [`ECMAScript 2016`](./)
 
 ## **TypeScript**
 
 ## **React**
+
+- [`리액트를 왜 쓰는가?`](https://github.com/leemember/TIL/issues/16)
+- [`useState와 useRef란 ?`](https://github.com/leemember/TIL/issues/17)
 
 ## **네트워크/HTTP**
 
